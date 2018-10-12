@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Nav = props => (
+const Nav = () => (
   <div>
     <Link href="/">
       <a>Home!</a>
