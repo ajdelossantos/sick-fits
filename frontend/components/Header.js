@@ -46,6 +46,7 @@ const StyledHeader = styled.header`
       grid-template-columns: 1fr;
       justify-content: center;
     }
+
   .sub-bar {
     display: grid;
     grid-template-columns: 1fr auto;
