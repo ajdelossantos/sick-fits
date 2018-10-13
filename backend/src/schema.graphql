@@ -1,0 +1,10 @@
+# Client facing types/mutations go here!
+
+# TODO implement later
+type Query {
+  testKey: String
+}
+
+type Mutation {
+  testKey: String
+}
