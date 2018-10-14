@@ -1,10 +1,14 @@
 # Client facing types/mutations go here!
 
+type Dog {
+  name: String!
+}
+
 # TODO implement later
 type Query {
-  testKey: String
+  dogs: [Dog]!
 }
 
 type Mutation {
-  testKey: String
+  createDog(name: String!): Dog
 }
