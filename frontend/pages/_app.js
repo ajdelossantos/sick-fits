@@ -8,7 +8,8 @@ class MyApp extends App {
     return (
       <Container>
         <Page>
-          <Component /> {/* Component here works like props.children */}
+          <Component />
+          {/* Component here works like props.children */}
         </Page>
       </Container>
     );
