@@ -8,14 +8,14 @@ import formatMoney from '../lib/formatMoney';
 
 class Item extends Component {
   static propTypes = {
-    items: PropTypes.object.isRequired,
+    item: PropTypes.object.isRequired,
   };
 
   render() {
     const { item } = this.props;
     return (
       <ItemStyles>
-        {item.image ? <img src={item.large} alt={item.title} /> : null}
+        {item.image ? <img src={item.largeImage} alt={item.title} /> : null}
         <Title>
           <Link
             href={{
