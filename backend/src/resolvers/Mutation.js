@@ -14,14 +14,25 @@ const Mutation = {
     // console.log(item);
 
     return item;
-  }
+  },
+  updateItem(parent, args, ctx, info) {
+    // First, take copy of updates
+    const updates = { ...args };
 
-  // createDog(parent, args, ctx, info) {
-  //   global.dogs = global.dogs || [];
-  //   const newDog = { name: args.name };
-  //   global.dogs.push(newDog);
-  //   return newDog;
-  // }
+    // Remove the id from the payload
+    delete updates.id;
+
+    // Run update method
+    return ctx.db.mutation.updateItem(
+      {
+        data: updates,
+        where: {
+          id: args.id
+        }
+      },
+      info
+    );
+  }
 };
 
 module.exports = Mutation;
